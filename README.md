@@ -10,3 +10,6 @@ Stanford's Machine Learning course (fall 2011).
 
 * Exercise 1 - Linear Regression: Implement linear regression and get to see it
 work with data.
+
+* Exercise 2 - Logistic Regression: Implement logistic regression and apply it
+to two different datasets.
