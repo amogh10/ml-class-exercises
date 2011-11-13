@@ -84,17 +84,32 @@ J_unreg = sum(sum((-y_ex .* log(hx)) .- ((1 - y_ex) .* log(1 - hx)))) / m;
 % regularization term
 reg = lambda/2/m * (sum(sum(Theta1(:, 2:end).^2)) + sum(sum(Theta2(:,2:end).^2)));
 
-% regularized coset
+% regularized cost
 J = J_unreg + reg;
 
+% // Part 2 ////////////////////////////////////////////////////////////////////
 
+% delta 3 (output)
+d3 = hx - y_ex;
 
+tt2 = Theta2;
+tt2(:, 1) = [];
+d2 = (d3 * tt2) .* sigmoidGradient(z2);
 
+% compute DELTAS
+D1 = d2' * a1;
+D2 = d3' * a2;
 
+Theta1_grad = 1/m * D1;
+Theta2_grad = 1/m * D2;
 
+% regularization terms
+Theta1_reg = (lambda/m) * [zeros(size(Theta1, 1), 1) Theta1(:,2:end)];
+Theta2_reg = (lambda/m) * [zeros(size(Theta2, 1), 1) Theta2(:,2:end)];
 
-
-
+% regularization adjustment
+Theta1_grad = Theta1_grad + Theta1_reg;
+Theta2_grad = Theta2_grad + Theta2_reg;
 
 % -------------------------------------------------------------
 
