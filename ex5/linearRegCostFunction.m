@@ -34,6 +34,19 @@ reg = ((lambda/(2*m)) * sum(theta(2:end) .^ 2));
 % J
 J = cost + reg;
 
+% Compute gradients
+% =========================================================================
+
+% Derivatives for each theta
+deriv = (X' * (hx - y)) / m;
+
+% Regularization terms
+reg_derivs = (lambda/m) .* theta;
+reg_derivs(1) = 0; % don't regulariza theta for first index (theta-0)
+
+% grad
+grad = deriv + reg_derivs;
+
 % =========================================================================
 
 grad = grad(:);
