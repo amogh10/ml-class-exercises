@@ -23,3 +23,5 @@ for neural networks and apply it to the task of hand-written digit recognition.
 * Exercise 5 - Regularized Linear Regression and Bias vs Variance: Implement
 regularized linear regression and use it to study models with different
 bias-variance properties.
+
+* Exercise 6 - Support Vector Machines: Use SVMs to build a spam classifier.
