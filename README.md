@@ -25,3 +25,7 @@ regularized linear regression and use it to study models with different
 bias-variance properties.
 
 * Exercise 6 - Support Vector Machines: Use SVMs to build a spam classifier.
+
+* Exercise 7 - K-means Clustering and Principal Component Analysis: Implement
+K-means clustering algorithm and apply it to compress an image. Then, use
+PCA to find a low-dimensional representation of face images.
