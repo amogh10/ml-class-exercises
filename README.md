@@ -29,3 +29,7 @@ bias-variance properties.
 * Exercise 7 - K-means Clustering and Principal Component Analysis: Implement
 K-means clustering algorithm and apply it to compress an image. Then, use
 PCA to find a low-dimensional representation of face images.
+
+* Exercise 8 - Anomaly Detection and Recommender Systems: Implement the anomaly
+detection algorithm to detect failing servers on a network. Then, use
+collaborative filtering to build a recommender system for movies.
