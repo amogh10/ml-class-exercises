@@ -2,7 +2,7 @@
 ## Programming Exercises
 
 This are my own implementations to the programming exercises for the
-Stanford's Machine Learning course (fall 2011).
+Stanford's Machine Learning online course (fall 2011).
 
 [http://www.ml-class.org](http://www.ml-class.org)
 
